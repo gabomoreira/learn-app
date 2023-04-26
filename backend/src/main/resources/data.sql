@@ -17,3 +17,7 @@ INSERT INTO tb_course (name, img_uri, img_gray_uri) VALUES ('Spring Boot', 'http
 
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2023-05-07T03:00:00Z',  TIMESTAMP WITH TIME ZONE '2024-06-07T03:00:00Z', 1);
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2023-07-07T03:00:00Z',  TIMESTAMP WITH TIME ZONE '2024-08-07T03:00:00Z', 1);
+
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Esta é uma mensagem teste para as notificações', TIMESTAMP WITH TIME ZONE '2023-07-07T03:23:11Z', false, 'aqui fica a route', 3);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Esta é uma mensagem teste para as notificações', TIMESTAMP WITH TIME ZONE '2023-07-07T03:23:11Z', false, 'aqui fica a route', 2);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Esta é uma mensagem teste para as notificações', TIMESTAMP WITH TIME ZONE '2023-07-07T03:23:11Z', false, 'aqui fica a route', 1);
