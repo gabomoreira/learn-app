@@ -3,6 +3,7 @@ package com.gabo.learn.entities;
 import java.io.Serializable;
 import java.time.Instant;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +23,10 @@ public class Notification implements Serializable {
 	private Long id;
 	
 	private String text;
+	
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant moment;
+	
 	private Boolean read;
 	private String route;
 	
