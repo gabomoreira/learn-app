@@ -25,3 +25,7 @@ INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Esta �
 INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Introdução', 'Aqui vamos aprender o básico para iniciar no spring boot', 1, 'https://link-da-img-resource.com', 1, 'https://link-da-img-resource.com', 1);
 INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Fórum', 'Tire suas dúvidas ', 2, 'https://link-da-img-resource.com', 2, 'https://link-da-img-resource.com', 1);
 INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Lives', 'Assista as lives gravadas', 3, 'https://link-da-img-resource.com', 0, 'https://link-da-img-resource.com', 1);
+
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequesite_id) VALUES ('Capítulo 1', 'Neste capítulo vamos começar o assunto', 1, 'https://link-da-img-section.com', 1, null);
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequesite_id) VALUES ('Capítulo 2', 'Neste capítulo vamos continuar seu aprendizado', 2, 'https://link-da-img-section.com', 1, 1);
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequesite_id) VALUES ('Capítulo 3', 'Neste capítulo vamos terminar a seçao com uma aula sensacional', 3, 'https://link-da-img-section.com', 1, 2);
