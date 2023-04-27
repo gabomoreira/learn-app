@@ -50,14 +50,18 @@ INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 1, 1);
 
 INSERT INTO tb_deliver (uri, moment, status, feedback, correct_count, lesson_id, user_id, offer_id) VALUES ('https://link-do-deliver.com', TIMESTAMP WITH TIME ZONE '2023-05-07T13:00:00Z', 0, null, null, 4, 1, 1);
 
+INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do tópico 1', 'Corpo do tópico 1', TIMESTAMP WITH TIME ZONE '2023-05-07T13:00:00Z', 2, 1, 1);
+INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do tópico 2', 'Corpo do tópico 2', TIMESTAMP WITH TIME ZONE '2023-05-07T13:00:00Z', 1, 1, 1);
+INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do tópico 3', 'Corpo do tópico 3', TIMESTAMP WITH TIME ZONE '2023-05-07T13:00:00Z', 2, 1, 2);
+INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do tópico 4', 'Corpo do tópico 4', TIMESTAMP WITH TIME ZONE '2023-05-07T13:00:00Z', 1, 1, 2);
 
+INSERT INTO tb_topic_likes (topic_id, user_id) VALUES (1, 1);
+INSERT INTO tb_topic_likes (topic_id, user_id) VALUES (2, 2);
 
+INSERT INTO tb_reply (body, moment, topic_id, author_id) VALUES ('Coloque o ; no final de cada linha, ceteza que é isso', TIMESTAMP WITH TIME ZONE '2023-05-07T13:00:00Z', 1, 3);
+INSERT INTO tb_reply (body, moment, topic_id, author_id) VALUES ('Era isso mesmo, não acredito kkkkkkk', TIMESTAMP WITH TIME ZONE '2023-05-07T13:00:00Z', 1, 2);
 
-
-
-
-
-
+INSERT INTO tb_reply_likes (reply_id, author_id) VALUES (1, 2);
 
 
 

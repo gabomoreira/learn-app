@@ -39,7 +39,6 @@ public class User implements Serializable{
 	@OneToMany(mappedBy = "user")
 	private List<Notification> notifications = new ArrayList<>();
 	
-	
 	public User() {
 		
 	}
