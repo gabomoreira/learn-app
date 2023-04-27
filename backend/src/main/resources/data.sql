@@ -18,9 +18,9 @@ INSERT INTO tb_course (name, img_uri, img_gray_uri) VALUES ('Spring Boot', 'http
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2023-05-07T03:00:00Z',  TIMESTAMP WITH TIME ZONE '2024-06-07T03:00:00Z', 1);
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2023-07-07T03:00:00Z',  TIMESTAMP WITH TIME ZONE '2024-08-07T03:00:00Z', 1);
 
-INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Esta é uma mensagem teste para as notificações', TIMESTAMP WITH TIME ZONE '2023-07-07T03:23:11Z', false, 'aqui fica a route', 3);
-INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Esta é uma mensagem teste para as notificações', TIMESTAMP WITH TIME ZONE '2023-07-07T03:23:11Z', false, 'aqui fica a route', 2);
-INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Esta é uma mensagem teste para as notificações', TIMESTAMP WITH TIME ZONE '2023-07-07T03:23:11Z', false, 'aqui fica a route', 1);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Comentário na tarefe: revisar a resposta', TIMESTAMP WITH TIME ZONE '2023-05-09T03:00:00Z', true, '/offers/1/resource/1/sections/1', 2);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Comentário na tarefe: revisar a resposta', TIMESTAMP WITH TIME ZONE '2023-05-10T03:00:00Z', true, '/offers/1/resource/1/sections/1', 2);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Comentário na tarefe: revisar a resposta', TIMESTAMP WITH TIME ZONE '2023-05-11T03:00:00Z', false, '/offers/1/resource/1/sections/1', 2);
 
 INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Introdução', 'Aqui vamos aprender o básico para iniciar no spring boot', 1, 'https://link-da-img-resource.com', 1, 'https://link-da-img-resource.com', 1);
 INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Fórum', 'Tire suas dúvidas ', 2, 'https://link-da-img-resource.com', 2, 'https://link-da-img-resource.com', 1);
@@ -48,11 +48,7 @@ INSERT INTO tb_task (id, description, question_count, approval_count, weight, du
 INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1);
 INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 1, 1);
 
-
-
-
-
-
+INSERT INTO tb_deliver (uri, moment, status, feedback, correct_count, lesson_id, user_id, offer_id) VALUES ('https://link-do-deliver.com', TIMESTAMP WITH TIME ZONE '2023-05-07T13:00:00Z', 0, null, null, 4, 1, 1);
 
 
 
