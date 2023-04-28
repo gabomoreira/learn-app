@@ -8,4 +8,5 @@ import com.gabo.learn.entities.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
+	User findByEmail(String email);
 }
