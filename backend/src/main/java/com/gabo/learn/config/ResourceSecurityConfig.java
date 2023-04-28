@@ -37,8 +37,8 @@ public class ResourceSecurityConfig extends ResourceServerConfigurerAdapter{
 		}
 		
 		http.authorizeRequests()
-		.antMatchers(PUBLIC).permitAll()
-		.anyRequest().authenticated();
+			.antMatchers(PUBLIC).permitAll()
+			.anyRequest().authenticated();
 	}
 }
 

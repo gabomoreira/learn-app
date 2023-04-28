@@ -14,23 +14,23 @@ import com.gabo.learn.entities.User;
 import com.gabo.learn.repositories.UserRepository;
 
 @Component
-public class JwtTokenEnhancer implements TokenEnhancer{
-
-	@Autowired
-	private UserRepository repository;
+public class JwtTokenEnhancer implements TokenEnhancer {
 	
+	@Autowired
+	private UserRepository userRepository;
+
 	@Override
 	public OAuth2AccessToken enhance(OAuth2AccessToken accessToken, OAuth2Authentication authentication) {
 
-		User user = repository.findByEmail(authentication.getName());
+		User user = userRepository.findByEmail(authentication.getName());
 		
 		Map<String, Object> map = new HashMap<>();
-		map.put("id", user.getId());
+		map.put("userId", user.getId());
 		
 		DefaultOAuth2AccessToken token = (DefaultOAuth2AccessToken) accessToken;
 		token.setAdditionalInformation(map);
 		
-		return token;
+		return accessToken;
 	}
 
 }
