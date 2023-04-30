@@ -33,9 +33,12 @@ public class Notification implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
+	
+	public Notification() {
+		
+	}
 
 	public Notification(Long id, String text, Instant moment, Boolean read, String route, User user) {
-		super();
 		this.id = id;
 		this.text = text;
 		this.moment = moment;
@@ -68,11 +71,11 @@ public class Notification implements Serializable {
 		this.moment = moment;
 	}
 
-	public Boolean getRead() {
+	public boolean isRead() {
 		return read;
 	}
 
-	public void setRead(Boolean read) {
+	public void setIsRead(Boolean read) {
 		this.read = read;
 	}
 
